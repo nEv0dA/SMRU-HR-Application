@@ -38,8 +38,9 @@ namespace HR
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colEdit = new System.Windows.Forms.DataGridViewImageColumn();
-            this.colDelete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.colDetails = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.colEdit = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.colDelete = new System.Windows.Forms.DataGridViewLinkColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).BeginInit();
             this.SuspendLayout();
@@ -74,6 +75,7 @@ namespace HR
             this.Column3,
             this.Column4,
             this.Column5,
+            this.colDetails,
             this.colEdit,
             this.colDelete});
             this.dgvEmployees.Location = new System.Drawing.Point(3, 34);
@@ -118,18 +120,35 @@ namespace HR
             this.Column5.HeaderText = "Address";
             this.Column5.Name = "Column5";
             // 
+            // colDetails
+            // 
+            this.colDetails.ActiveLinkColor = System.Drawing.Color.Black;
+            this.colDetails.HeaderText = "";
+            this.colDetails.LinkColor = System.Drawing.Color.Black;
+            this.colDetails.Name = "colDetails";
+            this.colDetails.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colDetails.Text = "Details";
+            this.colDetails.UseColumnTextForLinkValue = true;
+            // 
             // colEdit
             // 
+            this.colEdit.ActiveLinkColor = System.Drawing.Color.Black;
             this.colEdit.HeaderText = "";
-            this.colEdit.Image = ((System.Drawing.Image)(resources.GetObject("colEdit.Image")));
+            this.colEdit.LinkColor = System.Drawing.Color.Black;
             this.colEdit.Name = "colEdit";
+            this.colEdit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colEdit.Text = "Edit";
+            this.colEdit.UseColumnTextForLinkValue = true;
             // 
             // colDelete
             // 
+            this.colDelete.ActiveLinkColor = System.Drawing.Color.Black;
             this.colDelete.HeaderText = "";
+            this.colDelete.LinkColor = System.Drawing.Color.Black;
             this.colDelete.Name = "colDelete";
             this.colDelete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colDelete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.colDelete.Text = "Delete";
+            this.colDelete.UseColumnTextForLinkValue = true;
             // 
             // Form1
             // 
@@ -158,8 +177,9 @@ namespace HR
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewImageColumn colEdit;
-        private System.Windows.Forms.DataGridViewImageColumn colDelete;
+        private System.Windows.Forms.DataGridViewLinkColumn colDetails;
+        private System.Windows.Forms.DataGridViewLinkColumn colEdit;
+        private System.Windows.Forms.DataGridViewLinkColumn colDelete;
     }
 }
 
