@@ -66,11 +66,6 @@ namespace HR
             }
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
-
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             try

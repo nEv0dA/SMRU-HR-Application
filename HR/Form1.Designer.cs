@@ -31,6 +31,7 @@ namespace HR
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnDetails = new System.Windows.Forms.Button();
             this.btnAddNew = new System.Windows.Forms.Button();
             this.dgvEmployees = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,12 +48,23 @@ namespace HR
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnDetails);
             this.panel2.Controls.Add(this.btnAddNew);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1176, 31);
             this.panel2.TabIndex = 1;
+            // 
+            // btnDetails
+            // 
+            this.btnDetails.Location = new System.Drawing.Point(120, 1);
+            this.btnDetails.Name = "btnDetails";
+            this.btnDetails.Size = new System.Drawing.Size(82, 28);
+            this.btnDetails.TabIndex = 1;
+            this.btnDetails.Text = "Details";
+            this.btnDetails.UseVisualStyleBackColor = true;
+            this.btnDetails.Click += new System.EventHandler(this.btnDetails_Click);
             // 
             // btnAddNew
             // 
@@ -68,7 +80,6 @@ namespace HR
             // 
             this.dgvEmployees.AllowUserToAddRows = false;
             this.dgvEmployees.BackgroundColor = System.Drawing.Color.White;
-            this.dgvEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmployees.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
@@ -78,11 +89,12 @@ namespace HR
             this.colDetails,
             this.colEdit,
             this.colDelete});
-            this.dgvEmployees.Location = new System.Drawing.Point(3, 34);
+            this.dgvEmployees.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvEmployees.Location = new System.Drawing.Point(0, 31);
             this.dgvEmployees.Name = "dgvEmployees";
             this.dgvEmployees.RowHeadersVisible = false;
             this.dgvEmployees.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEmployees.Size = new System.Drawing.Size(1172, 583);
+            this.dgvEmployees.Size = new System.Drawing.Size(1176, 585);
             this.dgvEmployees.TabIndex = 2;
             this.dgvEmployees.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmployees_CellContentClick);
             // 
@@ -162,6 +174,7 @@ namespace HR
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employess";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).EndInit();
             this.ResumeLayout(false);
@@ -180,6 +193,7 @@ namespace HR
         private System.Windows.Forms.DataGridViewLinkColumn colDetails;
         private System.Windows.Forms.DataGridViewLinkColumn colEdit;
         private System.Windows.Forms.DataGridViewLinkColumn colDelete;
+        private System.Windows.Forms.Button btnDetails;
     }
 }
 
